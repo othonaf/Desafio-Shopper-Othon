@@ -12,7 +12,8 @@ export class RideCalculate {
 
             const url = `https://maps.googleapis.com/maps/api/directions/json?origin=${origin}&destination=${destination}&key=${apiKey}`;
 
-            const response = await axios.get<GoogleMapsResponse>(url); return response.data;
+            const response = await axios.get<GoogleMapsResponse>(url); 
+            return response.data;
 
         } catch (error: any) {
             throw new error(error.message)
