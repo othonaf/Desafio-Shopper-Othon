@@ -1,14 +1,14 @@
-import { Request, response, Response } from "express";
+import { Request, Response } from "express";
 import { RideCalculate } from "../business/rideCalculate";
+import RequestRide from "../interfaces/requestRideInterface";
 
 export class UserRide {
-    createUser = async (req: Request, res: Response) => {
+    createRide = async (req: Request, res: Response) => {
         try {
-            const origin = req.body.origin;
-            const destination = req.body.destination;
+            const request: RequestRide = req.body;
 
             const newRide = new RideCalculate();
-            const routeResponse = await newRide.calculateRoute(origin, destination)
+            const routeResponse = await newRide.calculateRoute(request)
 
             if (routeResponse) {
                 res.status(200).send(routeResponse)

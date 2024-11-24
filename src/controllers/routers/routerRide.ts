@@ -5,4 +5,4 @@ export const routerRide = express.Router();
 
 const userController = new UserRide();
 
-routerRide.post('/estimate', userController.createUser)
+routerRide.post('/estimate', userController.createRide)
