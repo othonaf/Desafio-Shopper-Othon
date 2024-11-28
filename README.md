@@ -56,7 +56,7 @@ npm run dev
 A API Backend estará disponível em http://localhost:8080.
 O Frontend estará disponível em http://localhost:80.
 
-Exemplos de Uso
+## Exemplos de Uso:
 Aqui estão alguns exemplos de como interagir com os endpoints da API.
 
 1. Busca de Viagens:
@@ -70,4 +70,24 @@ Exemplo de requisição (JSON):
     "destination": "Camocim, Ceará"
 }
 ```
+2. Confirmar Viagem:
+Endpoint: GET /ride/confirm
+Exemplo de requisição (JSON):
+```json
+{
+    "customer_id": 2020,
+    "origin": "Fortaleza, Ceará",
+    "destination": "Juazeiro, Ceará",
+    "distance": 15234,
+    "duration": "PT32M15S",
+    "driver": {
+        "id": 2,
+        "name": "Homer Simpson"
+    },
+    "value": "10.00"
+}
+```
+3. Endpoint de Listar Viagens de Usuário
+Endpoint: GET {{url}}/ride/20212?driver_id=2
+
 
