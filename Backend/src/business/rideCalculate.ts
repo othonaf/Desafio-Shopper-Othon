@@ -70,7 +70,7 @@ export class RideCalculate {
                 response = responseJson;
             }
 
-            // Extrair informações relevantes da resposta da API
+            // Extrair informações da resposta da API
             const route = response.routes[0];
 
             //Recebendo dados de motoristas:
@@ -79,15 +79,21 @@ export class RideCalculate {
 
             // Processar e ordenar os dados dos motoristas
             const sortedDrivers = driversData
-                .map((driver: { id: any; name: any; description: any; vehicle: any; review: { rating: any; comment: any; }; value: number; }) => ({
+                .map((driver: {
+                    review_comment: any;
+                    review_rating: string; id: any; name: any; description: any; vehicle: any; review: { rating: any; comment: any; }; value: number;
+                }) => ({
                     id: driver.id,
                     name: driver.name,
                     description: driver.description,
                     vehicle: driver.vehicle,
-                    review: driver.review,
+                    review: {
+                        rating: parseFloat(driver.review_rating),
+                        comment: driver.review_comment
+                    },
                     value: driver.value
                 }))
-                .sort((a:any, b:any) => a.value - b.value);
+                .sort((a: any, b: any) => a.value - b.value);
 
             // Criar a resposta para o usuário
             const userResponse: UserResponse = {

@@ -11,6 +11,9 @@ Uma aplicação completa (Backend, Frontend e Banco de Dados) de solicitação d
 - **Jest**: Biblioteca para criação e execução de testes automatizados.
 - **React**: Framework de criação de Frontend interativo.
 
+## Arquitetura Utilizada
+- **Arquitetura em Três Camadas**: Utilizei aqui o padrão que estou mais habituado em desenvolvimento de Backends (Business, Controllers e Data).
+
 ## Funcionalidades
 A API permite realizar as seguintes operações:
 - **Solicitação de Viagem**: Feito através da inserção de origem e destino.
@@ -67,17 +70,4 @@ Exemplo de requisição (JSON):
     "destination": "Camocim, Ceará"
 }
 ```
-2. Consulta de Usuários
-Endpoint: GET /user
 
-3. Atualização de Usuário
-Endpoint: PUT /user/:id
-Exemplo de requisição (JSON):
-```json
-{
-  "name": "Othon Updated",
-  "email": "othon_updated@exemplo.com",
-  "age": 31,
-  "active": false
-}
-```

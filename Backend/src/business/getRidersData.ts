@@ -6,16 +6,16 @@ export class DriversData {
         const drivers = new GetDrivers();
         const driversData = await drivers.getDrivers();
 
-        const options = driversData.map((driver: { nome: string; carro: string; avaliacao: string; taxa: number; }, index: number) => ({
+        const options = driversData.map((driver: { name: string; vehicle: string; description: string; review_rating: number; review_comment: string; value: number; }, index: number) => ({
             id: index + 1,
-            name: driver.nome,
-            description: "Rota padrão calculada",
-            vehicle: driver.carro,
+            name: driver.name,
+            description: driver.description,
+            vehicle: driver.vehicle,
             review: {
-                rating: driver.avaliacao,
-                comment: "Boa rota"
+                rating: driver.review_rating,
+                comment: driver.review_comment
             },
-            value: driver.taxa
+            value: driver.value
         }));
 
         return options; // Retorne os dados mapeados

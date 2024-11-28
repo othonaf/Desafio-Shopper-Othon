@@ -58,7 +58,6 @@ class RideCalculate {
                     'X-Goog-Api-Key': apiKey,
                     'X-Goog-FieldMask': 'routes.distanceMeters,routes.duration,routes.polyline.encodedPolyline'
                 };
-                
                 let response;
                 try {
                     const responseGoogleApi = yield axios_1.default.post(url, requestBody, { headers });
@@ -73,7 +72,7 @@ class RideCalculate {
                     console.error("Erro ao chamar a API do Google:", error);
                     response = responseJson;
                 }
-                // Extrair informações relevantes da resposta da API
+                // Extrair informações da resposta da API
                 const route = response.routes[0];
                 //Recebendo dados de motoristas:
                 const drivers = new getDrivers_1.GetDrivers;
@@ -85,7 +84,10 @@ class RideCalculate {
                     name: driver.name,
                     description: driver.description,
                     vehicle: driver.vehicle,
-                    review: driver.review,
+                    review: {
+                        rating: parseFloat(driver.review_rating),
+                        comment: driver.review_comment
+                    },
                     value: driver.value
                 }))
                     .sort((a, b) => a.value - b.value);

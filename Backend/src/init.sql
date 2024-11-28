@@ -42,3 +42,16 @@ boa. Recomendo!',
         'Serviço impecável! O motorista é a própria definição de classe e o carro é simplesmente magnífico. Uma experiência digna de um agente secreto.',
         10.00
     );
+
+CREATE TABLE IF NOT EXISTS rides (
+    id INT AUTO_INCREMENT PRIMARY KEY,
+    customer_id VARCHAR(255) NOT NULL,
+    origin VARCHAR(255) NOT NULL,
+    destination VARCHAR(255) NOT NULL,
+    distance DOUBLE NOT NULL,
+    duration VARCHAR(50) NOT NULL,
+    driver_id INT NOT NULL,
+    driver_name VARCHAR(100) NOT NULL,
+    value DECIMAL(10, 2) NOT NULL,
+    created_at TIMESTAMP DEFAULT CURRENT_TIMESTAMP
+);

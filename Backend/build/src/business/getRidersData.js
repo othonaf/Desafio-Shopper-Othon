@@ -19,14 +19,14 @@ class DriversData {
             const driversData = yield drivers.getDrivers();
             const options = driversData.map((driver, index) => ({
                 id: index + 1,
-                name: driver.nome,
-                description: "Rota padrão calculada",
-                vehicle: driver.carro,
+                name: driver.name,
+                description: driver.description,
+                vehicle: driver.vehicle,
                 review: {
-                    rating: driver.avaliacao,
-                    comment: "Boa rota"
+                    rating: driver.review_rating,
+                    comment: driver.review_comment
                 },
-                value: driver.taxa
+                value: driver.value
             }));
             return options; // Retorne os dados mapeados
         });
