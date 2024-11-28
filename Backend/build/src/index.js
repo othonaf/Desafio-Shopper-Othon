@@ -7,10 +7,13 @@ const app_1 = __importDefault(require("./controllers/app"));
 const routerTestDB_1 = require("./controllers/routers/routerTestDB");
 const routerRide_1 = require("./controllers/routers/routerRide");
 const routerRideConfirm_1 = require("./controllers/routers/routerRideConfirm");
+const routerUserRide_1 = require("./controllers/routers/routerUserRide");
 // Rota para o endpoint de adicionar Usuário
 app_1.default.use('/', routerTestDB_1.routerTest);
 // Rota para o Endpoint de Calcular Viagem:
 app_1.default.use('/ride', routerRide_1.routerRide);
+// Rota para o Endpoint de Listar Viagens do Usuário:
+app_1.default.use('/ride', routerUserRide_1.routerUserRide);
 // Rota para o Endpoint de Confirmar Viagem:
 app_1.default.use('/ride', routerRideConfirm_1.routerRideConfirm);
 exports.default = app_1.default;
