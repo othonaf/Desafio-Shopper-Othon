@@ -1,0 +1,27 @@
+{
+    "routes": [
+      {
+        "legs": [
+          {
+            "startLocation": {
+              "latLng": {
+                "latitude": -23.550520,
+                "longitude": -46.633309
+              }
+            },
+            "endLocation": {
+              "latLng": {
+                "latitude": -23.557821,
+                "longitude": -46.655981
+              }
+            }
+          }
+        ],
+        "distanceMeters": 15234,
+        "duration": "PT32M15S",
+        "polyline": {
+          "encodedPolyline": "mlo~Fa`|uOjA}AzAaBnBwBhCoCdDsDbEyEfF}FhGcHjHiInIsJlJyKnK_MpLeMrMuNtO{PvQaS|SiU~UqWbXyYdZ_\\f\\g^h^o`@j`@waBncB_dBpeBmfBzgB}hBdjBqkB~kBcnBroByqBdtB_uBnwBkxB|zBu|BfBwBrBcCbCoCrCyC"
+        }
+      }
+    ]
+  }
