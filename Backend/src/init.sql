@@ -1,3 +1,7 @@
+CREATE DATABASE IF NOT EXISTS desafio-Shopper;
+
+USE desafio-Shopper;
+
 CREATE TABLE IF NOT EXISTS drivers (
     id INT AUTO_INCREMENT PRIMARY KEY,
     name VARCHAR(100) NOT NULL,
