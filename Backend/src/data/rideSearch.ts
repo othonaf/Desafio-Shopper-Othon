@@ -12,7 +12,6 @@ export class RideSearchQuery extends BaseDataBase {
         }
 
         const result = await query; 
-        console.log('Query Result:', result); 
         return result;    
     }
 
