@@ -3,7 +3,7 @@ import { BaseDataBase } from "./baseDataBase";
 export class GetDrivers extends BaseDataBase {
     getDrivers = async (): Promise<any> => {
         try {
-            const result = await BaseDataBase.connection('motorista').select("*");
+            const result = await BaseDataBase.connection('drivers').select("*");
             return result;
         } catch (error) {
             console.error("Erro ao buscar motoristas:", error);

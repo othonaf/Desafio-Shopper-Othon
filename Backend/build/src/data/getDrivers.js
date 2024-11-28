@@ -16,7 +16,7 @@ class GetDrivers extends baseDataBase_1.BaseDataBase {
         super(...arguments);
         this.getDrivers = () => __awaiter(this, void 0, void 0, function* () {
             try {
-                const result = yield baseDataBase_1.BaseDataBase.connection('motorista').select("*");
+                const result = yield baseDataBase_1.BaseDataBase.connection('drivers').select("*");
                 return result;
             }
             catch (error) {

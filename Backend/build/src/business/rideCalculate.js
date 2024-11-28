@@ -58,6 +58,7 @@ class RideCalculate {
                     'X-Goog-Api-Key': apiKey,
                     'X-Goog-FieldMask': 'routes.distanceMeters,routes.duration,routes.polyline.encodedPolyline'
                 };
+                
                 let response;
                 try {
                     const responseGoogleApi = yield axios_1.default.post(url, requestBody, { headers });
