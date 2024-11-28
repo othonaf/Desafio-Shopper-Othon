@@ -1,4 +1,4 @@
-# Teste Zaros Othon
+# Teste Shopper Othon
 
 ## Descrição
 Uma aplicação completa (Backend, Frontend e Banco de Dados) de solicitação de viagens usando a API Routes do Google Maps desenvolvida em Node.js, usando Express e Knex no Backend, React.js no Frontend e MySQLQ, como parte do teste de admissão da Shopper.
